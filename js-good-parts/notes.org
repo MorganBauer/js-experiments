@@ -1,0 +1,15 @@
+* prologue
+* ch 1 - good parts
+provides a nice testing ground file
+
+I learned that the formatting of the '<pre>' tags is literal and puts some extra whitespace in if there is whitespace there.
+* ch 2 grammar
+
+comments
+
+names
+
+numbers
+says here that all numbers are 64 bit doubles and that "A large class of numeric type errors is avoided." Unfortunately, I say, a large number of numeric errors is now possible. http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+
+
