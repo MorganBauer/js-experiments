@@ -4,12 +4,108 @@ provides a nice testing ground file
 
 I learned that the formatting of the '<pre>' tags is literal and puts some extra whitespace in if there is whitespace there.
 * ch 2 grammar
-
-comments
-
-names
-
-numbers
+** comments
+block comments and single line comments. use single line comments to avoid problems with embedded symbols that might terminate block comments.
+** names
+plenty of reserved words, but otherwise seems to be the standard rules. starts with a letter and can have underscores and numbers inside.
+** numbers
 says here that all numbers are 64 bit doubles and that "A large class of numeric type errors is avoided." Unfortunately, I say, a large number of numeric errors is now possible. http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+numbers have methods though, and a math module to act on numbers.
+** strings
+single quotes or double quotes
+
+backslash escape
+
+all 16 bit chars, UTF-16? UCS2?
+
+no character type, use single length strings.
+
+strings are immutable, compared by contents, and have methods
+** statements
+compilation unit is made up of statements
+
+each script tag is a compilation unit
+
+when a script tag is encountered, it is immediately executed
+
+all compilation units are in a global namespace, as there is no linker.
+
+var statements for private variables
+
+
+if switch while for do break return throw
+
+
+has blocks, but blocks do not scope
+
+labels
+
+for conditionals, everything but falsy things is true, which includes random objects, etc.
+
+false is :
+ - false
+ - null
+ - undefined
+ - empty string ''
+ - number 0
+ - number NaN
+
+switch matches on strings and numbers (not objects)
+
+while loop is standard
+
+for loops have normal three clause form, as well as a foreach form as "for x in y"
+gotcha on foreach form is to check object.hasOwnProperty(var) to make sure the object under test itself has the variable, and not a different object in the prototype chain (what is prototype chain?)
+
+do while is standard
+
+try catch seems to catch everything ? 
+
+throw sends a whole object, by convention containing 'name' and 'message'
+
+return can have a value or not. if it doesn't the value is 'undefined'.
+no newline between return and the thing being returned.
+
+break exits from loop or switch, as well as labeled blocks if given a label.
+
+expression
+ - assignment
+ - invocation of method
+ - delete object property
+
+single '=' used for assignment
+triple '===' used for comparison
+
+literal values are expressions
+invocation new
+refinement delete
+subexpression in parens
+expression preceded by assignment
+ternary '?'
+
+operators have precedence
+
+typeof returns a string
+
+&& and || produce the value of the triggering operand, or the last if none.
+
+invocation executes a function ()
+
+refinement accesses a property or specific element of an object or array
+this is dot references and [] reference
+
+literals
+- string
+- number
+- object
+- array
+- function
+- regex
+
+functions
+have literals, with optional names for recursive calling
+internal variable definitions
+
+I really like the railroad diagrams.
 
 
