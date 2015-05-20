@@ -108,4 +108,83 @@ internal variable definitions
 
 I really like the railroad diagrams.
 
+* ch 3 objects
+simple types are:
+- numbers
+- strings
+- booleans
+- null
+- undefined
+all other types are objects
+
+ - numbers,
+ -  strings
+ -  booleans
+ are immutable, but have methods
+
+objects are mutable keyed collections
+functions are objects, arrays ar objects, regexs are objects, and objects are objects
+
+objects is container of properties, which are key-value pairs.
+
+keys can be any string (even ''), values can be any object except for undefined
+
+objects do not have classes. 
+
+prototype linkage, allows one object to inherit the properties of another. (claim of reduced initialization and memory consumption)
+
+** object literals.
+create new objects
+curly braces with key-value pairs separated by commas
+
+key is any string, but does not necessarily need to be quoted. (probably best to always quote, I imagine)
+
+objects can obviously nest
+
+values retrieved with [], shortcut of using dot reference, similarly to unquoted strings for keys in creation
+
+common paradigm of || used to return a default value
+
+use paradigm of && for nullcheck
+
+objects are mutable, so values can be updated. they can be created if they do not exist, or replaced if they do.
+
+passed by reference. never copied.
+
+** prototypes
+
+all objects linked to a prototype Object.prototype
+
+when making an object, it is possible to select the prototype.
+
+provided create method creates a new object using an old object as prototype.
+
+editing the original object edits the new object, but editing the new object does not edit the original object. 
+
+this is a 'defaulting' lookup. if it doesn't exist on the current object, it looks in the parent prototype
+
+this relationship is constant and dynamic. any change at a higher level affects all those at lower levels. 
+** reflection
+inspect an object by attempting to retrieve values. typeof can be used to check the values.
+
+anything in the prototype chain can be found, including defaults like toString and constructor
+
+paradigm of ignoring function values, because mainly data is what is being looked for.
+
+other paradigm is using "hasOwnProperty" method which looks at only the current definition and not the prototype chain.
+
+
+** enumeration
+'for in' loops over all the keys in an object
+commonly used with filters of hasOwnProperty and/or is not a function.
+
+no guratneed order. so if wanted in an order, make an array, and iterate through that.
+
+** delete 
+deletes a key value pair
+
+** keeping globals under control
+
+make a single global variable for everything to be under.
+
 
