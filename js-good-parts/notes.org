@@ -188,3 +188,126 @@ deletes a key value pair
 make a single global variable for everything to be under.
 
 
+* ch 4 functions 
+
+closures!
+
+function encloses statements. fundamental modular unit. 
+
+functions are objects. function objects are linked to Function.prototype. each function has two hidden properties. the context, and the implementation
+
+hasa 'prototype' property, with a value of an object, with a 'constructor' property which has the value of the function body.
+
+complicated.
+
+
+functions can be used like any othe robjects. the can be stored, and passed, and returned. functions can even have methods.
+
+functions uniquely, can be invoked.
+
+** function literals
+four parts
+- function
+- name, optional, can be used for recursive calls. usable by debuggers and dev tools. does not need to be given a name.
+- parameters - inside parens, separated by commas. initilized to arguments supplied when invoked.
+- body - executed statements when function is invoked
+
+functions can be defined nearlyanywhere, even inside other functions. inner functions can access variables inside of the outer function.
+functions object created by literal has link to the context it is defined within. closure.
+
+** invocation
+besirdes the declared parameters, also have 'this' and 'arguments'
+
+four kinds of invocation:
+ - method
+ - function
+ - constructor
+ - apply
+the type of invocation determines the initialization of 'this'
+
+invocation is pair of parens, following an expression that produces a function value. the parens contain comma separated expressions that produce the argument values, which get assignd to parameter names. 
+no runtime error for mismatch. too few , missing are substituted with undifined, too many, extra are ignored. no type checking. anything goes anywhere.
+
+** method invocation
+function stored in property of an object. 'this' is bound to the enclosing object.
+
+** function invocation
+not property of object. 'this' is bound to global.
+
+paradigm of variable called 'that' to pass the enclosing state to inner funcitons.
+** constructor
+prototypal, not classical. still, 'new' is provided.
+
+I don't get this. 
+
+convention is capitalized name.
+
+when called without new, bad stuff happens.
+
+don't use these
+
+** apply
+functions with methods.
+
+construct an array of args to invoke the function, choosing the value of 'this'
+
+two parameters, first is 'this', second is array of args
+
+** args
+hidden parameter is array 'arguments' which has all of the arguments, named, plus the extra ones.
+
+allows a sort of 'varargs' like implementation, but convention is to manually pass an array.
+
+it's not an array, but is 'array-like' missing some array methods.
+
+** return.
+exit early. returning a value, or undefined if nothing is given.
+
+** exceptions
+normal object, that should have 'name' and 'message'
+
+catch block gets all exceptions. to filter specific ones, the exception must be examined.
+
+** augmenting
+adding a method to the prototype makes it available to all.
+
+can augment even the builtins
+
+
+** recursion
+
+a recursive function calls itself.
+
+useful for walking the dom.
+
+no tail call recursion
+
+** scope
+function scope but not block scope.
+
+** closure
+inner functions get access to the variables of the functions they are defined within.
+the inner function can have a longer lifetime than the outer function, if it escapes, or is returned.
+
+** callbacks
+async
+
+create a function that is passed in, to be called at some time later when something else is done.
+
+** modules
+
+gensym
+
+** cascade
+dot dot dot
+
+method chaining.
+
+** currying
+
+augmenting the function proototype. which saves the arguments, and uses apply.
+
+
+** memoize
+
+use a closure to store state
