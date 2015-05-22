@@ -311,3 +311,20 @@ augmenting the function proototype. which saves the arguments, and uses apply.
 ** memoize
 
 use a closure to store state
+* ch 5 inheritance
+types and code reuse
+
+possible inheritence patterns
+
+prototypes screw things up again.
+
+spends a bunch of time making it more java-normal like
+
+
+object specifier, instead of arguments, this is essentially keyword args
+
+differential inheritance with prototypes, is all about specifying what's different, and letting the higher level prototype shine through when nothing needs to be changed.
+
+no privacy. except if hidden in a function.
+
+need to read this again
