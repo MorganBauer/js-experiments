@@ -328,3 +328,27 @@ differential inheritance with prototypes, is all about specifying what's differe
 no privacy. except if hidden in a function.
 
 need to read this again
+
+* ch 6 arrays
+arrays aren't really arrays. subscripts are turning into strings to make properties.
+
+really an associative array.
+
+mainly just like accessing object information, but with a special format, and extra methods
+
+literal form is square brackets surrounding values separated by commas. the keys by default become '0', '1', '2', etc.
+
+
+arrays have length. length is not necessarily the number of things in the array.
+
+four billion max.
+
+length can be set directly. larger does not allocate, smaller truncates everything larger.
+
+paradigm of assigning item to array.length, but there exists a push method to do it as well.
+
+
+delete still works, but leaves a hole in the array. splice is a workaround for the hole issue, 
+
+for in still works over array objects, but it still grabs things it shouldn't, and it still doesn't go in order.
+

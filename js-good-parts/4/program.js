@@ -62,7 +62,7 @@ Function.prototype.method = function (name, func) {
     }
 }
 
-car myObj = (function () {
+var myObj = (function () {
     var value = 0;
 
     return {
