@@ -352,3 +352,30 @@ delete still works, but leaves a hole in the array. splice is a workaround for t
 
 for in still works over array objects, but it still grabs things it shouldn't, and it still doesn't go in order.
 
+
+
+* ch7 regexes
+
+created specifically formatted
+have an exec method 
+capturing groups, named matches
+result array.
+
+noncapturing groups are more efficient.
+
+
+literals are enclosed in brackets. also have a ReqExp constructor which takes a string.
+
+have properties, global, ignorecate, lastindex, multiline, source
+
+literals are all the same (so not threadsafe to use?)
+
+groups:
+ - capturing
+ - noncapturing
+ - positive lookahead
+ - negative lookahead
+
+quantifiers and greedy vs lazy matching
+
+
