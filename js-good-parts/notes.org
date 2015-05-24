@@ -378,4 +378,55 @@ groups:
 
 quantifiers and greedy vs lazy matching
 
+* ch 8 methods
+
+standard methods available on specific types
+ 
+** array
+ - concat
+ - join 
+ - pop
+ - push
+ - reverse
+ - shift
+ - slice
+ - sort
+ - splice
+ - unshift
+
+** function
+functions can be applied
+
+** number
+ - toExponential
+ - toFixed
+ - toPrecision
+ - toString takes a base argument, defaults to 10
+
+** obect
+hasOwnProperty
+
+** RegExp
+ - exec
+ - test
+
+** String
+ - charAt
+ - charCodeAt
+ - concat
+ - indexOf
+ - lastIndexOf
+ - localeCompare
+ - match
+ - replace
+ - search
+ - slice
+ - split
+ - substring
+ - toLocaleLowerCase
+ - toLocaleUpperCase
+ - toLowerCase
+ - toUpperCase
+ - fromCharCode
+
 
