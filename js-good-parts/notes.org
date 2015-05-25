@@ -354,7 +354,7 @@ for in still works over array objects, but it still grabs things it shouldn't, a
 
 
 
-* ch7 regexes
+* ch 7 regexes
 
 created specifically formatted
 have an exec method 
@@ -429,4 +429,9 @@ hasOwnProperty
  - toUpperCase
  - fromCharCode
 
+* ch 9 style
+* ch 10 beautiful js
+* Appendix A - Awful parts
+* Appendix B - bad parts
 
+void takes an operand and returns undefined. shockingly useful when you don't want to affect the page, but want to run some code.
